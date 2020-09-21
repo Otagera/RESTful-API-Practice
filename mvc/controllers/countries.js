@@ -2,6 +2,12 @@ const request = require('request');
 
 let domainPath = "http://localhost:3000";
 
+
+if (process.env.NODE_ENV === 'production') {
+    domainPath = "https://leocountryapi.herokuapp.com/";
+}
+
+
 getCountryList = function(req, res, next) {
 	const path = "/api/countries";
 	const requestOptions = {
