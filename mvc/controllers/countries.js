@@ -113,8 +113,6 @@ deleteCountry = function({ params }, res, next) {
 	});
 }
 
-
-
 module.exports = {
 	getCountryList,
 	getCountryForm,
